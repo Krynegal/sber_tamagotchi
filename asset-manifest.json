@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/sber_tamagotchi/static/css/main.25f63fda.chunk.css",
+    "main.js": "/sber_tamagotchi/static/js/main.d3ba195d.chunk.js",
+    "main.js.map": "/sber_tamagotchi/static/js/main.d3ba195d.chunk.js.map",
+    "runtime-main.js": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js",
+    "runtime-main.js.map": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js.map",
+    "static/css/2.97503911.chunk.css": "/sber_tamagotchi/static/css/2.97503911.chunk.css",
+    "static/js/2.907c3469.chunk.js": "/sber_tamagotchi/static/js/2.907c3469.chunk.js",
+    "static/js/2.907c3469.chunk.js.map": "/sber_tamagotchi/static/js/2.907c3469.chunk.js.map",
+    "static/js/3.b5be2dcb.chunk.js": "/sber_tamagotchi/static/js/3.b5be2dcb.chunk.js",
+    "static/js/3.b5be2dcb.chunk.js.map": "/sber_tamagotchi/static/js/3.b5be2dcb.chunk.js.map",
+    "index.html": "/sber_tamagotchi/index.html",
+    "static/css/2.97503911.chunk.css.map": "/sber_tamagotchi/static/css/2.97503911.chunk.css.map",
+    "static/css/main.25f63fda.chunk.css.map": "/sber_tamagotchi/static/css/main.25f63fda.chunk.css.map",
+    "static/js/2.907c3469.chunk.js.LICENSE.txt": "/sber_tamagotchi/static/js/2.907c3469.chunk.js.LICENSE.txt",
+    "static/media/1.faa4a944.gif": "/sber_tamagotchi/static/media/1.faa4a944.gif",
+    "static/media/12.2fae7a1b.gif": "/sber_tamagotchi/static/media/12.2fae7a1b.gif",
+    "static/media/13.79dfcacf.gif": "/sber_tamagotchi/static/media/13.79dfcacf.gif",
+    "static/media/17.c38a8421.gif": "/sber_tamagotchi/static/media/17.c38a8421.gif",
+    "static/media/18.8d571b49.gif": "/sber_tamagotchi/static/media/18.8d571b49.gif",
+    "static/media/2-1.80ce6c6a.gif": "/sber_tamagotchi/static/media/2-1.80ce6c6a.gif",
+    "static/media/22.4136651e.gif": "/sber_tamagotchi/static/media/22.4136651e.gif",
+    "static/media/25.85aaaa1b.gif": "/sber_tamagotchi/static/media/25.85aaaa1b.gif",
+    "static/media/38.489e2560.gif": "/sber_tamagotchi/static/media/38.489e2560.gif",
+    "static/media/39.162e65cd.gif": "/sber_tamagotchi/static/media/39.162e65cd.gif",
+    "static/media/42.8fdaa8a2.gif": "/sber_tamagotchi/static/media/42.8fdaa8a2.gif",
+    "static/media/43.6373dfc9.gif": "/sber_tamagotchi/static/media/43.6373dfc9.gif",
+    "static/media/44.11222dc3.gif": "/sber_tamagotchi/static/media/44.11222dc3.gif",
+    "static/media/5-1.761cd7bd.gif": "/sber_tamagotchi/static/media/5-1.761cd7bd.gif",
+    "static/media/6.a6804373.gif": "/sber_tamagotchi/static/media/6.a6804373.gif",
+    "static/media/8-1.0b1500a1.gif": "/sber_tamagotchi/static/media/8-1.0b1500a1.gif",
+    "static/media/unnamed.16989a75.gif": "/sber_tamagotchi/static/media/unnamed.16989a75.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c5fe94f.js",
+    "static/css/2.97503911.chunk.css",
+    "static/js/2.907c3469.chunk.js",
+    "static/css/main.25f63fda.chunk.css",
+    "static/js/main.d3ba195d.chunk.js"
+  ]
+}
