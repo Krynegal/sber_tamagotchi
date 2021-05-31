@@ -78,70 +78,6 @@ export class App extends React.Component {
     this.words = this.words.bind(this);
     this.changeFlag = this.changeFlag.bind(this);
 
-  // this.assistant = initializeAssistant(() => this.getStateForAssistant());
-  // this.assistant.on("data", (event /*: any*/) => {
-  //   if (event.type == "smart_app_data") {
-  //     console.log("User");
-  //     console.log(event);
-  //     console.log('evemt.sub', event.sub);
-  //     if (event.sub != undefined) {
-  //       console.log("Sub", event.sub);
-  //       this.state.UserId = event.sub;
-  //       createUser(this.state.UserId, this.state.name, 100, 100, 100, 
-  //         new Date(), this.state.sec, this.state.min, this.state.hour, false, true);
-  //       getUser(this.state.UserId).then((user) => {
-  //         console.log(user);
-  //         this.setState({kusua: user["kusua"]});
-  //         this.setState({flag: user["flag"]})
-  //         this.Change_img();
-  //         this.setState({name: user["name"]});
-  //         this.setState({foodLevel: user["foodLevel"]});
-  //         this.setState({playLevel: user["playLevel"]});
-  //         this.setState({sleepLevel: user["sleepLevel"]});
-  //         this.didTamagatchiDie(); 
-  //         this.setState({sec: user["sec"]});
-  //         this.setState({min: user["min"]});
-  //         this.setState({hour: user["hour"]});
-    
-  //         const time = user["timeOfExit"];
-  //         const diffTime = this.getTimeDifference(time);
-    
-  //         this.state.foodLevel = this.state.foodLevel - Math.round(diffTime / 12000);
-  //         if (this.state.foodLevel < 0) {this.state.foodLevel = 0}
-      
-  //         this.state.sleepLevel = this.state.sleepLevel - Math.round(diffTime / 60000);
-  //         if (this.state.sleepLevel < 0) {this.state.sleepLevel = 0}
-      
-  //         this.state.playLevel = this.state.playLevel - Math.round(diffTime / 20000);
-  //         if (this.state.playLevel < 0) {this.state.playLevel = 0}
-      
-  //         this.state.sec = this.state.sec + Math.round((diffTime / 1000) % 60);
-  //         this.state.min = this.state.min + Math.round((diffTime / (1000 * 60)) % 60);
-  //         this.state.hour = this.state.hour + Math.round((diffTime / (1000 * 60 * 60)) % 24);
-  //       })
-  //       updateUser(this.state.UserId, 
-  //         this.state.name,
-  //         this.state.foodLevel, 
-  //         this.state.playLevel, 
-  //         this.state.sleepLevel,
-  //         new Date(),
-  //         this.state.sec,
-  //         this.state.min,
-  //         this.state.hour,
-  //         this.state.kusua,
-  //         this.state.flag,
-  //         );
-  //     }
-  //   console.log(`assistant.on(data)`, event);
-  //   const { action } = event;
-  //   this.dispatchAssistantAction(action);
-  //   }
-  // });
-  // this.assistant.on("start", (event) => {
-  //   console.log(`assistant.on(start)`, event);
-  // });
-
-
   }
 
   
@@ -192,6 +128,18 @@ export class App extends React.Component {
           this.state.UserId = event.sub;
           createUser(this.state.UserId, this.state.name, 100, 100, 100, 
             new Date(), this.state.sec, this.state.min, this.state.hour, false, true);
+          updateUser(this.state.UserId, 
+            this.state.name,
+            this.state.foodLevel, 
+            this.state.playLevel, 
+            this.state.sleepLevel,
+            new Date(),
+            this.state.sec,
+            this.state.min,
+            this.state.hour,
+            this.state.kusua,
+            this.state.flag,
+            );
           getUser(this.state.UserId).then((user) => {
             console.log(user);
             this.setState({kusua: user["kusua"]});
@@ -222,18 +170,7 @@ export class App extends React.Component {
             this.state.min = this.state.min + Math.round((diffTime / (1000 * 60)) % 60);
             this.state.hour = this.state.hour + Math.round((diffTime / (1000 * 60 * 60)) % 24);
           })
-          updateUser(this.state.UserId, 
-            this.state.name,
-            this.state.foodLevel, 
-            this.state.playLevel, 
-            this.state.sleepLevel,
-            new Date(),
-            this.state.sec,
-            this.state.min,
-            this.state.hour,
-            this.state.kusua,
-            this.state.flag,
-            );
+          
         }
       console.log(`assistant.on(data)`, event);
       const { action } = event;
