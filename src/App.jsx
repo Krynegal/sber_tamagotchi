@@ -2,7 +2,7 @@ import React from "react";
 import logo0 from '../src/unnamed.gif';
 import logo1 from '../src/1.gif';
 import logo2 from '../src/22.gif';
-import logo3 from '../src/12.gif';
+import logo3 from '../src/12-1.gif';
 import logo4 from '../src/44.gif';
 import logo5 from '../src/38.gif';
 import logo6 from '../src/39.gif';
@@ -64,7 +64,7 @@ export class App extends React.Component {
       hour: 0,
       min: 0,
       sec: 0, 
-      name: "Sbercat",
+      name: "Сберкот",
       s: ``,
       m: ``,
       ch: ``,
@@ -77,7 +77,6 @@ export class App extends React.Component {
     this.timer = this.timer.bind(this);
     this.words = this.words.bind(this);
     this.changeFlag = this.changeFlag.bind(this);
-
   }
 
   
@@ -126,7 +125,7 @@ export class App extends React.Component {
         if (event.sub != undefined) {
           console.log("Sub", event.sub);
           this.state.UserId = event.sub;
-          createUser(this.state.UserId, this.state.name, 100, 100, 100, 
+          createUser(this.state.UserId, this.state.name, 51, 51, 51, 
             new Date(), this.state.sec, this.state.min, this.state.hour, false, true);
           updateUser(this.state.UserId, 
             this.state.name,
@@ -170,7 +169,6 @@ export class App extends React.Component {
             this.state.min = this.state.min + Math.round((diffTime / (1000 * 60)) % 60);
             this.state.hour = this.state.hour + Math.round((diffTime / (1000 * 60 * 60)) % 24);
           })
-          
         }
       console.log(`assistant.on(data)`, event);
       const { action } = event;
@@ -248,15 +246,15 @@ export class App extends React.Component {
       }
   }
 
-  //сделаать уровень еды максимальным
+  //сделать уровень еды максимальным
   feed() { 
     this.state.foodLevel = 100;
   }
-  //сделаать уровень сна максимальным
+  //сделать уровень сна максимальным
   sleep() {           
     this.state.sleepLevel = 100;
   }
-  //сделаать уровень счатья максимальным
+  //сделать уровень счатья максимальным
   play() {            
     this.state.playLevel = 100;
   }
@@ -283,9 +281,9 @@ export class App extends React.Component {
     else if ((this.state.foodLevel <= this.state.sleepLevel)&&(this.state.foodLevel <= this.state.playLevel)&&(this.state.foodLevel <= 60))
     this.setState({ logo:  logo13});
     else if ((this.state.playLevel <= this.state.sleepLevel)&&(this.state.playLevel <= this.state.foodLevel)&&(this.state.playLevel <= 60))
-    this.setState({ logo:  logo14});
-    else if ((this.state.sleepLevel <= this.state.playLevel)&&(this.state.sleepLevel <= this.state.foodLevel)&&(this.state.sleepLevel <= 60))
     this.setState({ logo:  logo15});
+    else if ((this.state.sleepLevel <= this.state.playLevel)&&(this.state.sleepLevel <= this.state.foodLevel)&&(this.state.sleepLevel <= 60))
+    this.setState({ logo:  logo14});
     if ((this.state.foodLevel <= 0) && (this.state.sleepLevel <= 0) && (this.state.playLevel <= 0))
     {
       this.setState({ logo:  logo16});
@@ -331,6 +329,7 @@ export class App extends React.Component {
     return state;
   }
 
+
   dispatchAssistantAction (action) {
     console.log('dispatchAssistantAction', action);
     if (action) {
@@ -348,6 +347,10 @@ export class App extends React.Component {
           this.setState({name : action.note});
           break;
         
+        case 'exit':
+          this.assistant.close();          
+          break;
+
         default:
           //throw new Error();
       }
@@ -399,7 +402,7 @@ export class App extends React.Component {
 
 
   changeFlag(value){
-    const notify = () => toast.success("Будет доступна через минуту!", {
+    const notify = () => toast.success("Будет доступна, когда Сберкоту исполнится одна минута!", {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -427,7 +430,7 @@ export class App extends React.Component {
         this.setState({ flag:  true});
         break;
     }
-    
+
   }
 
 
@@ -435,7 +438,7 @@ export class App extends React.Component {
     if (this.state.min === 0) this.state.m= ``;
     else if (this.state.min === 1){
       this.setState({ m:  `${this.state.min} минуту`});
-    } else if ((this.state.min > 1)&&(this.state.min < 5)) {
+    } else if ((this.state.min %10 > 1)&&(this.state.min %10 < 5)&&(this.state.min != 12)&&(this.state.min != 13)&&(this.state.min != 14)) {
       this.setState({ m:  `${this.state.min} минуты`});
     } else {this.setState({ m:  `${this.state.min} минут`});}
 
@@ -453,6 +456,23 @@ export class App extends React.Component {
     } else {this.setState({ s:  `${this.state.sec} секунд`});}
   }
   
+  assistant_global_event(phrase) {
+    this.assistant.sendData({
+      action: {
+        action_id: phrase
+      }
+    })
+    if (phrase === "feed") {
+      this.Change_img(1);
+    } else if (phrase === 'play') {
+      this.Change_img(2);
+    } else if (phrase === 'sleep') {
+      this.Change_img(3);
+    } else if (phrase === 'exit') {
+      this.assistant.close()
+    }
+  }
+
   render() {
     console.log('render');
     const f = this.state.foodLevel * 4;
@@ -465,16 +485,15 @@ export class App extends React.Component {
 
     return (
       <div >
-        <Container>
+        <Container style = {{padding: 0
+
+}}>
         <Row>
-            <Col sizeXL={10}><h1> {tamagotchiName} живет {this.state.ch} {this.state.m} {this.state.s} </h1></Col>
-        </Row>
-        <Row>
-            <Col type="calc" size={1} > <img id = "img" src={this.state.logo} class="rounded mx-auto d-block"  style={{width: 400, height:400 }}/>
-            </Col>
+            <Col sizeXL={9}> <h1 class="center"> {tamagotchiName} живет {this.state.ch} {this.state.m} {this.state.s} </h1></Col>
         </Row>
         <Row>
             <Col sizeXL={10} offset={1}>
+              <div >
             <Tabs
             size='l'
             view= 'secondary'
@@ -491,7 +510,7 @@ export class App extends React.Component {
                 >
                     Куся 
                 </TabItem>
-        </Tabs>
+        </Tabs> </div>
         <ToastContainer 
           position="bottom-center"
           autoClose={5000}
@@ -504,107 +523,141 @@ export class App extends React.Component {
           pauseOnHover/>
               </Col>
         </Row>
-        </Container>
+        <Row>
+            <Col type="calc" size={5} > <img id = "img" src={this.state.logo} class="img"  />
+            </Col>
+            <Col>
+            <div  style={{textalign:'center'}}>
         
-        <h1 style={{
-        position: 'absolute',
-        left: '500px',
-        top: '77px',
-        }}> {this.state.foodLevel} </h1>
+        <Button
+        class = "button"
+        style={{margin: '1em', textalign:'center'}}
+        text='Покормить!'
+        size='m'
+        view='primary'
+        pin="square-square"
+        onClick={() => this.assistant_global_event("feed")}
+        />
+        <Button
+        class = "button"
+        style={{margin: '1em', textalign:'center'}}
+        text='Поиграть!'
+        size='m'
+        view='primary'
+        pin="square-square"
+        onClick={() => this.assistant_global_event('play')}
+        />
+        <Button
+        class = "button"
+        style={{margin: '1em', textalign:'center'}}
+        text='Поспать!'
+        size='m'
+        view='primary'
+        pin="square-square"
+        onClick={() => this.assistant_global_event('sleep')}
+        />
+        <Button
+        class = "button"
+        style={{margin: '1em', textalign:'center'}}
+        text='Выход!'
+        size='m'
+        view='primary'
+        pin="square-square"
+        onClick={() => this.assistant.close()}
+        />
+        </div>
+            <div >
+          <div >
+        <h2 class = "box" style={{
+        paddingRight: '1.5em',
+      width: '50px'}}
+        > {this.state.foodLevel} </h2>
 
-        <div class="rounded" style={{
-        position: 'absolute',
+        <div class = "box" 
+        style={{
         width: f + 'px', // `${v}px`
-        left: '570px',
-        top: '100px',
         height: '35px',
+        textalign: 'right',
         backgroundColor: c1,
-        }}> </div>
+        }}
+        > </div>
+        <div class = "box" 
+        style={{
+        width: (420 - f ) + 'px', // `${v}px`
+        }}
+        > </div>
 
-        <h1 style={{
-        position: 'absolute',
-        left: '1000px',
-        top: '77px',
-        }}> Сытость </h1>
+        <h2 class = "box" 
+        > Сытость </h2>
+        </div>
+        <div class="two" style={{height: '35px'}}></div>
 
-        <h1 style={{
-        position: 'absolute',
-        left: '500px',
-        top: '177px',
-        }}> {this.state.playLevel} </h1>
-
-        <div class="rounded" style={{
-        position: 'absolute',
+        <div >
+        <h2 class = "box" style={{
+        paddingRight: '1.5em',
+      width: '50px'}}
+        > {this.state.playLevel} </h2>
+        <div class = "box"
+         style={{
         width: p +'px', // `${v}px`
-        left: '570px',
-        top: '200px',
         height: '35px',
         backgroundColor: c2,
         }}> </div>
+        <div class = "box" 
+        style={{
+        width: (420 - p) +'px',
+        height: '35px',
+        }}
+        > </div>
+        <h2 class = "box"
+        > Счастье </h2> 
+        </div>
 
-        <h1 style={{
-        position: 'absolute',
-        left: '1000px',
-        top: '177px',
-        }}> Счастье </h1>
+        <div class="two" style={{height: '35px'}}></div>
 
-        <h1 style={{
-        position: 'absolute',
-        left: '500px',
-        top: '277px',
-        }}> {this.state.sleepLevel} </h1>
-
-        <div class="rounded" style={{
-        position: 'absolute',
+        <div >
+        <h2 class = "box" style={{
+        paddingRight: '1.5em',
+      width: '50px'}}
+        > {this.state.sleepLevel} </h2>
+        <div class = "box" 
+        style={{
         width: s+'px', // `${v}px`
-        left: '570px',
-        top: '300px',
         height: '35px',
         backgroundColor: c3,
         }}> </div>
 
-        <h1 style={{
-        position: 'absolute',
-        left: '1000px',
-        top: '277px',
-        }}> Бодрость </h1>
-
-
-        <Button
+        <div class = "box" 
         style={{
-          position: 'absolute',
-          left: '500px',
-          top: '400px',
-          }}
-        text='Покормить!'
-        size='l'
-        view='primary'
-        pin="square-square"
-        onClick={()=>this.Change_img(1)}/>
+        width: (420 - s) +'px',
+        height: '35px',
+        }}
+        > </div>
 
-        <Button
-        style={{
-          position: 'absolute',
-          left: '680px',
-          top: '400px',
-          }}
-        text='Поиграть!'
-        size='l'
-        view='primary'
-        pin="square-square"
-        onClick={()=>this.Change_img(2)}/>
+        <h2 class = "box"
+        > Бодрость </h2>
+
+        </div >
+
+        </div>
+        </Col>
+        </Row>
+        <Row> <div style={{
+        width:  '20px',
+        height: '20px',
+        }}>
+
+          </div></Row>
         
-        <Button
-        style={{
-          position: 'absolute',
-          left: '845px',
-          top: '400px',
-          }}
-        text='Поспать!'
-        size='l'
-        view='primary'
-        pin="square-square"
-        onClick={()=>this.Change_img(3)}/>
+        <Row>
+          <div style={{
+        width:  '200px',
+        height: '200px',
+        }}>
+
+          </div>
+        </Row>
+        </Container>
         
       </div>
     )

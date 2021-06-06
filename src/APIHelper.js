@@ -1,7 +1,7 @@
 import axios from "axios";
 
-
-const API_URL = "https://serene-inlet-82302.herokuapp.com/";
+const API_URL = "http://127.0.0.1:8000/";
+//const API_URL = "https://serene-inlet-82302.herokuapp.com/";
 
 export async function createUser(UserId, name, foodLevel, sleepLevel, playLevel, timeOfExit, sec, min, hour, kusua, flag) {
   const { data: answer } = await axios.post(API_URL + "user/", {
