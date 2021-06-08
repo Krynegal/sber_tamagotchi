@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/sber_tamagotchi/static/css/main.8da05a3c.chunk.css",
-    "main.js": "/sber_tamagotchi/static/js/main.299c5438.chunk.js",
-    "main.js.map": "/sber_tamagotchi/static/js/main.299c5438.chunk.js.map",
+    "main.css": "/sber_tamagotchi/static/css/main.4cab8bb7.chunk.css",
+    "main.js": "/sber_tamagotchi/static/js/main.a3fc187d.chunk.js",
+    "main.js.map": "/sber_tamagotchi/static/js/main.a3fc187d.chunk.js.map",
     "runtime-main.js": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js",
     "runtime-main.js.map": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js.map",
     "static/css/2.97503911.chunk.css": "/sber_tamagotchi/static/css/2.97503911.chunk.css",
-    "static/js/2.3fdfff44.chunk.js": "/sber_tamagotchi/static/js/2.3fdfff44.chunk.js",
-    "static/js/2.3fdfff44.chunk.js.map": "/sber_tamagotchi/static/js/2.3fdfff44.chunk.js.map",
+    "static/js/2.288da973.chunk.js": "/sber_tamagotchi/static/js/2.288da973.chunk.js",
+    "static/js/2.288da973.chunk.js.map": "/sber_tamagotchi/static/js/2.288da973.chunk.js.map",
     "static/js/3.b5be2dcb.chunk.js": "/sber_tamagotchi/static/js/3.b5be2dcb.chunk.js",
     "static/js/3.b5be2dcb.chunk.js.map": "/sber_tamagotchi/static/js/3.b5be2dcb.chunk.js.map",
     "index.html": "/sber_tamagotchi/index.html",
     "static/css/2.97503911.chunk.css.map": "/sber_tamagotchi/static/css/2.97503911.chunk.css.map",
-    "static/css/main.8da05a3c.chunk.css.map": "/sber_tamagotchi/static/css/main.8da05a3c.chunk.css.map",
-    "static/js/2.3fdfff44.chunk.js.LICENSE.txt": "/sber_tamagotchi/static/js/2.3fdfff44.chunk.js.LICENSE.txt",
+    "static/css/main.4cab8bb7.chunk.css.map": "/sber_tamagotchi/static/css/main.4cab8bb7.chunk.css.map",
+    "static/js/2.288da973.chunk.js.LICENSE.txt": "/sber_tamagotchi/static/js/2.288da973.chunk.js.LICENSE.txt",
     "static/media/1.10ff95b7.gif": "/sber_tamagotchi/static/media/1.10ff95b7.gif",
     "static/media/12-1.528ab71d.gif": "/sber_tamagotchi/static/media/12-1.528ab71d.gif",
     "static/media/13.1e99b31e.gif": "/sber_tamagotchi/static/media/13.1e99b31e.gif",
@@ -35,8 +35,8 @@
   "entrypoints": [
     "static/js/runtime-main.5c5fe94f.js",
     "static/css/2.97503911.chunk.css",
-    "static/js/2.3fdfff44.chunk.js",
-    "static/css/main.8da05a3c.chunk.css",
-    "static/js/main.299c5438.chunk.js"
+    "static/js/2.288da973.chunk.js",
+    "static/css/main.4cab8bb7.chunk.css",
+    "static/js/main.a3fc187d.chunk.js"
   ]
 }
