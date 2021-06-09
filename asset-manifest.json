@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sber_tamagotchi/static/css/main.4cab8bb7.chunk.css",
-    "main.js": "/sber_tamagotchi/static/js/main.ae13de0f.chunk.js",
-    "main.js.map": "/sber_tamagotchi/static/js/main.ae13de0f.chunk.js.map",
+    "main.js": "/sber_tamagotchi/static/js/main.729cbe27.chunk.js",
+    "main.js.map": "/sber_tamagotchi/static/js/main.729cbe27.chunk.js.map",
     "runtime-main.js": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js",
     "runtime-main.js.map": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js.map",
     "static/css/2.97503911.chunk.css": "/sber_tamagotchi/static/css/2.97503911.chunk.css",
@@ -37,6 +37,6 @@
     "static/css/2.97503911.chunk.css",
     "static/js/2.c66c7f5d.chunk.js",
     "static/css/main.4cab8bb7.chunk.css",
-    "static/js/main.ae13de0f.chunk.js"
+    "static/js/main.729cbe27.chunk.js"
   ]
 }
