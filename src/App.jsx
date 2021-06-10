@@ -81,7 +81,8 @@ export class App extends React.Component {
       size: 'm',
       full: null,
       img: null,
-      offset: null,
+      sizeImg: null,
+      sizeDiv: null,
     }
     this.Change_img = this.Change_img.bind(this);
     this.changeColor = this.changeColor.bind(this);
@@ -489,6 +490,8 @@ export class App extends React.Component {
       this.state.size='s';
       this.state.full=220;
       this.state.img=350;
+      this.state.sizeImg=3;
+      this.state.sizeDiv=3;
     } else 
     if (window.screen.width > 1300)
     {
@@ -498,8 +501,21 @@ export class App extends React.Component {
       this.state.size='m'
       this.state.full=420;
       this.state.img=400;
+      this.state.sizeImg=5;
+      this.state.sizeDiv=6;
     } 
-    else  {
+    else  if (window.screen.width > 900)
+    {
+      this.state.f1*= 4;
+      this.state.p1*= 4;
+      this.state.s1*=4 ;
+      this.state.size='m'
+      this.state.full=420;
+      this.state.img=400;
+      this.state.sizeImg=5;
+      this.state.sizeDiv=7;
+    } 
+    else {
       this.state.offset=2;
       this.state.f1*= 1.5;
       this.state.p1*= 1.5;
@@ -507,6 +523,9 @@ export class App extends React.Component {
       this.state.size='s';
       this.state.full=170;
       this.state.img=200;
+
+      this.state.sizeImg=3;
+      this.state.sizeDiv=4;
     }
   }
   assistant_global_event(phrase) {
@@ -575,9 +594,9 @@ export class App extends React.Component {
               
         </Row>
         <Row>
-            <Col type="calc" size={3} > <img id = "img" src={this.state.logo} class="img"  />
+            <Col type="calc" size={this.state.sizeImg} > <img id = "img" src={this.state.logo} class="img"  />
             </Col>
-            <Col size={5}>
+            <Col size={this.state.sizeDiv}>
             <div  style={{textalign:'center'}}>
         
         <Button
