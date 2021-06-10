@@ -59,8 +59,8 @@ body {
 
 @media(max-width:900px) {
   .center{
-    font-size: 120%;
-    padding-left: 0em;
+    font-size: 130%;
+    padding-left: 0.5em;
   }
   .frame{
     width: 60%;
@@ -86,7 +86,7 @@ body {
     height: 10%;
     top: 30%;
     margin-left: 0.1em;
-
+    padding-left: 0.5em;
   }
   .button{
     height: 100%;

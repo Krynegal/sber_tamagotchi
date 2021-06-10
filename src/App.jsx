@@ -525,7 +525,7 @@ export class App extends React.Component {
       this.state.full=520;
       this.state.img=600;
       this.state.sizeImg=6;
-      this.state.sizeDiv=9;
+      this.state.sizeDiv=8;
     } 
     else {
       this.state.offset=2;
