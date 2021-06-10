@@ -119,3 +119,36 @@ body {
       top: 30%;
     }
 }
+
+@media(width: 1280px) {
+  .center{
+    font-size: 120%;
+  }
+  .img{
+    height: 300px;
+    width: 300px;
+  }
+  .box {
+    height: 100%;
+    width: 30%;
+    font-size: 140%;
+    width: 10%;
+    height: 10%;
+    top: 30%;
+    margin-left: 0.1em;
+
+  }
+  .button{
+    height: 100%;
+    width: 30%;
+    font-size: 50%;
+    margin: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    top: 30%;
+    size: 30%
+  }
+    .two{
+      top: 30%;
+    }
+}
