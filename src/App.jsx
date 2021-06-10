@@ -601,7 +601,7 @@ export class App extends React.Component {
         
         <Button
         class = "button"
-        style={{margin: '0.5em', textalign:'center'}}
+        style={{margin: '0.2em', textalign:'center'}}
         text='Покормить!'
         size={this.state.size}
         view='primary'
@@ -609,7 +609,7 @@ export class App extends React.Component {
         onClick={()=>this.assistant_global_event('feed')}/>
         <Button
         class = "button"
-        style={{margin: '0.5em', textalign:'center'}}
+        style={{margin: '0.2em', textalign:'center'}}
         text='Поиграть!'
         size={this.state.size}
         view='primary'
@@ -617,7 +617,7 @@ export class App extends React.Component {
         onClick={()=>this.assistant_global_event('play')}/>
         <Button
         class = "button"
-        style={{margin: '0.5em', textalign:'center'}}
+        style={{margin: '0.2em', textalign:'center'}}
         text='Поспать!'
         size={this.state.size}
         view='primary'
