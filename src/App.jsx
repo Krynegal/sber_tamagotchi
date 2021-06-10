@@ -489,9 +489,9 @@ export class App extends React.Component {
       this.state.s1*= 2;
       this.state.size='s';
       this.state.full=220;
-      this.state.img=350;
-      this.state.sizeImg=3;
-      this.state.sizeDiv=5;
+      this.state.img=320;
+      this.state.sizeImg=2;
+      this.state.sizeDiv=4;
     } else 
     if (window.screen.width > 1300)
     {
