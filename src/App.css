@@ -135,12 +135,10 @@ body {
 
   }
   .button{
-    height: 100%;
     width: 30%;
     font-size: 50%;
-    margin: 0.5em;
     top: 30%;
-    size: 30%
+    size: 30%;
   }
     .two{
       top: 30%;
