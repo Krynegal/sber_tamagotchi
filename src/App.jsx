@@ -280,7 +280,7 @@ export class App extends React.Component {
   didTamagatchiDie()
   {
     if (this.state.kusua===false){
-    if ((this.state.foodLevel >= 60)&&(this.state.sleepLevel >= 60)&&(this.state.playLevel >= 60))
+    if ((this.state.foodLevel > 60)&&(this.state.sleepLevel > 60)&&(this.state.playLevel > 60))
     this.setState({ logo:  logo1});
     else if ((this.state.foodLevel <= this.state.sleepLevel)&&(this.state.foodLevel <= this.state.playLevel)&&(this.state.foodLevel <= 60))
     this.setState({ logo:  logo6});
@@ -293,7 +293,7 @@ export class App extends React.Component {
       this.setState({ logo:  logo5});
     }
   } else {
-    if ((this.state.foodLevel >= 60)&&(this.state.sleepLevel >= 60)&&(this.state.playLevel >= 60))
+    if ((this.state.foodLevel > 60)&&(this.state.sleepLevel > 60)&&(this.state.playLevel > 60))
     this.setState({ logo:  logo9});
     else if ((this.state.foodLevel <= this.state.sleepLevel)&&(this.state.foodLevel <= this.state.playLevel)&&(this.state.foodLevel <= 60))
     this.setState({ logo:  logo13});
@@ -420,7 +420,7 @@ export class App extends React.Component {
   changeFlag(value){
     const notify = () => toast.success("Будет доступна через час!", {
       position: "top-center",
-      autoClose: 5000,
+      autoClose: 4000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -594,7 +594,7 @@ export class App extends React.Component {
         </Tabs> </div>
         <ToastContainer 
           position="top-center"
-          autoClose={5000}
+          autoClose={4000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
