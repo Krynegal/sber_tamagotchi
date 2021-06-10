@@ -81,6 +81,7 @@ export class App extends React.Component {
       size: 'm',
       full: null,
       img: null,
+      offset: null,
     }
     this.Change_img = this.Change_img.bind(this);
     this.changeColor = this.changeColor.bind(this);
@@ -482,12 +483,12 @@ export class App extends React.Component {
       this.state.img=500;
     } else 
     if (window.screen.width === 1280){
-      this.state.f1*= 1.5;
-      this.state.p1*= 1.5;
-      this.state.s1*= 1.5;
+      this.state.f1*= 2;
+      this.state.p1*= 2;
+      this.state.s1*= 2;
       this.state.size='s';
-      this.state.full=170;
-      this.state.img=300;
+      this.state.full=220;
+      this.state.img=350;
     } else 
     if (window.screen.width > 1300)
     {
@@ -499,6 +500,7 @@ export class App extends React.Component {
       this.state.img=400;
     } 
     else  {
+      this.state.offset=2;
       this.state.f1*= 1.5;
       this.state.p1*= 1.5;
       this.state.s1*= 1.5;
@@ -570,11 +572,12 @@ export class App extends React.Component {
           draggable
           pauseOnHover/>
               </Col>
+              
         </Row>
         <Row>
-            <Col type="calc" size={4} > <img id = "img" src={this.state.logo} class="img"  />
+            <Col type="calc" size={3} > <img id = "img" src={this.state.logo} class="img"  />
             </Col>
-            <Col>
+            <Col size={5}>
             <div  style={{textalign:'center'}}>
         
         <Button
