@@ -125,8 +125,8 @@ body {
     font-size: 120%;
   }
   .img{
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
   }
   .box {
     height: 100%;
@@ -139,7 +139,7 @@ body {
     font-size: 10%;
     top: 30%;
     size: 10%;
-    margin: 0;
+    margin: 0em;
   }
     .two{
       top: 30%;

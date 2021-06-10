@@ -490,7 +490,7 @@ export class App extends React.Component {
       this.state.size='s';
       this.state.full=220;
       this.state.img=300;
-      this.state.sizeImg=1;
+      this.state.sizeImg=3;
       this.state.sizeDiv=4;
     } else 
     if (window.screen.width > 1300)
@@ -601,7 +601,7 @@ export class App extends React.Component {
         
         <Button
         class = "button"
-        style={{margin: '1em', textalign:'center'}}
+        style={{margin: '0.5em', textalign:'center'}}
         text='Покормить!'
         size={this.state.size}
         view='primary'
@@ -609,7 +609,7 @@ export class App extends React.Component {
         onClick={()=>this.assistant_global_event('feed')}/>
         <Button
         class = "button"
-        style={{margin: '1em', textalign:'center'}}
+        style={{margin: '0.5em', textalign:'center'}}
         text='Поиграть!'
         size={this.state.size}
         view='primary'
@@ -617,7 +617,7 @@ export class App extends React.Component {
         onClick={()=>this.assistant_global_event('play')}/>
         <Button
         class = "button"
-        style={{margin: '1em', textalign:'center'}}
+        style={{margin: '0.5em', textalign:'center'}}
         text='Поспать!'
         size={this.state.size}
         view='primary'
