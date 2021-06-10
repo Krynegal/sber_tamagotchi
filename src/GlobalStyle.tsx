@@ -11,9 +11,15 @@ const DocStyles = createGlobalStyle`
     color: ${text};
     background-color: ${background};
     background-image: ${gradient};
+<<<<<<< HEAD
 
     /** необходимо залить градиентом всю подложку */
     min-height: 100vh;
+=======
+    min-height: 100vh;
+    /** необходимо залить градиентом всю подложку */
+    
+>>>>>>> 2cece1dcef35d671738c5e1dc354a21b0c525ee1
   }
 `;
 

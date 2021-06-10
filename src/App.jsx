@@ -2,7 +2,7 @@ import React from "react";
 import logo0 from '../src/unnamed.gif';
 import logo1 from '../src/1.gif';
 import logo2 from '../src/22.gif';
-import logo3 from '../src/12-1.gif';
+import logo3 from '../src/12.gif';
 import logo4 from '../src/44.gif';
 import logo5 from '../src/38.gif';
 import logo6 from '../src/39.gif';
@@ -17,8 +17,9 @@ import logo14 from '../src/5-1.gif';
 import logo15 from '../src/6.gif';
 import logo16 from '../src/2-1.gif';
 
-import { Container, Row, Col, Button, Radiobox, Tabs, TabItem, Icon} from '@sberdevices/plasma-ui';
+import { Container, Row, Col, Button, Radiobox, Tabs, TabItem, Icon, DeviceThemeProvider} from '@sberdevices/plasma-ui';
 import { ToastContainer, toast } from 'react-toastify';
+import { detectDevice } from '@sberdevices/plasma-ui/utils';
 import 'react-toastify/dist/ReactToastify.css';
 import {
   createSmartappDebugger,
@@ -31,6 +32,7 @@ import {
   getUser,
   updateUser,
 } from "./APIHelper.js";
+import { m } from "@sberdevices/plasma-core/mixins";
 
 const initializeAssistant = (getState/*: any*/) => {
   if (process.env.NODE_ENV === "development") {
@@ -45,6 +47,7 @@ const initializeAssistant = (getState/*: any*/) => {
 
 
 export class App extends React.Component {
+  
   constructor(props) {
     super(props);
     console.log('constructor');
@@ -64,19 +67,27 @@ export class App extends React.Component {
       hour: 0,
       min: 0,
       sec: 0, 
-      name: "Сберкот",
+      name: "Тамагочи",
       s: ``,
       m: ``,
       ch: ``,
-      flag: null,
+      ag: null,
       f: false,
       kusua: null,
+  
+      f1: null,
+      p1: null,
+      s1: null,
+      size: 'm',
+      full: null,
+      img: null,
     }
     this.Change_img = this.Change_img.bind(this);
     this.changeColor = this.changeColor.bind(this);
     this.timer = this.timer.bind(this);
     this.words = this.words.bind(this);
     this.changeFlag = this.changeFlag.bind(this);
+    this.checkWidth = this.checkWidth.bind(this);
   }
 
   
@@ -96,7 +107,7 @@ export class App extends React.Component {
         this.state.hour += 1;
         };
       };
-      if ((this.state.min >= 1) || (this.state.our >= 1)){
+      if (this.state.hour >= 1){
         this.state.f = true;
       }
     };
@@ -169,6 +180,7 @@ export class App extends React.Component {
             this.state.min = this.state.min + Math.round((diffTime / (1000 * 60)) % 60);
             this.state.hour = this.state.hour + Math.round((diffTime / (1000 * 60 * 60)) % 24);
           })
+          
         }
       console.log(`assistant.on(data)`, event);
       const { action } = event;
@@ -198,15 +210,18 @@ export class App extends React.Component {
     setInterval(() => {
       this.less(1); 
       this.didTamagatchiDie(); 
+      this.checkWidth();
       this.changeColor();
     }, 12000);
     setInterval(() => {
       this.less(2); 
+      this.checkWidth();
       this.didTamagatchiDie(); 
       this.changeColor();
     }, 60000);
     setInterval(() => {
       this.less(3); 
+      this.checkWidth();
       this.didTamagatchiDie(); 
       this.changeColor();
     }, 20000);
@@ -246,15 +261,15 @@ export class App extends React.Component {
       }
   }
 
-  //сделать уровень еды максимальным
+  //сделаать уровень еды максимальным
   feed() { 
     this.state.foodLevel = 100;
   }
-  //сделать уровень сна максимальным
+  //сделаать уровень сна максимальным
   sleep() {           
     this.state.sleepLevel = 100;
   }
-  //сделать уровень счатья максимальным
+  //сделаать уровень счатья максимальным
   play() {            
     this.state.playLevel = 100;
   }
@@ -281,9 +296,9 @@ export class App extends React.Component {
     else if ((this.state.foodLevel <= this.state.sleepLevel)&&(this.state.foodLevel <= this.state.playLevel)&&(this.state.foodLevel <= 60))
     this.setState({ logo:  logo13});
     else if ((this.state.playLevel <= this.state.sleepLevel)&&(this.state.playLevel <= this.state.foodLevel)&&(this.state.playLevel <= 60))
-    this.setState({ logo:  logo15});
-    else if ((this.state.sleepLevel <= this.state.playLevel)&&(this.state.sleepLevel <= this.state.foodLevel)&&(this.state.sleepLevel <= 60))
     this.setState({ logo:  logo14});
+    else if ((this.state.sleepLevel <= this.state.playLevel)&&(this.state.sleepLevel <= this.state.foodLevel)&&(this.state.sleepLevel <= 60))
+    this.setState({ logo:  logo15});
     if ((this.state.foodLevel <= 0) && (this.state.sleepLevel <= 0) && (this.state.playLevel <= 0))
     {
       this.setState({ logo:  logo16});
@@ -328,7 +343,6 @@ export class App extends React.Component {
     console.log('getStateForAssistant: state:', state)
     return state;
   }
-
 
   dispatchAssistantAction (action) {
     console.log('dispatchAssistantAction', action);
@@ -402,8 +416,8 @@ export class App extends React.Component {
 
 
   changeFlag(value){
-    const notify = () => toast.success("Будет доступна, когда Сберкоту исполнится одна минута!", {
-      position: "bottom-center",
+    const notify = () => toast.success("Будет доступна через минуту!", {
+      position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -430,7 +444,7 @@ export class App extends React.Component {
         this.setState({ flag:  true});
         break;
     }
-
+    
   }
 
 
@@ -455,14 +469,43 @@ export class App extends React.Component {
       this.setState({ s:  `${this.state.sec} секунды`});
     } else {this.setState({ s:  `${this.state.sec} секунд`});}
   }
-  
+  checkWidth(){
+    this.state.f1 = this.state.foodLevel ;
+    this.state.p1 = this.state.playLevel;
+    this.state.s1 = this.state.sleepLevel ;
+    if (window.screen.width > 1750){
+      this.state.f1*= 5;
+      this.state.p1*= 5;
+      this.state.s1*= 5 ;
+      this.state.size='l'
+      this.state.full=520;
+      this.state.img=500;
+    } else 
+    if (window.screen.width > 1000)
+    {
+      this.state.f1*= 4;
+      this.state.p1*= 4;
+      this.state.s1*=4 ;
+      this.state.size='m'
+      this.state.full=420;
+      this.state.img=400;
+    } 
+    else  {
+      this.state.f1*= 1.5;
+      this.state.p1*= 1.5;
+      this.state.s1*= 1.5;
+      this.state.size='s';
+      this.state.full=170;
+      this.state.img=200;
+    }
+  }
   assistant_global_event(phrase) {
     this.assistant.sendData({
       action: {
         action_id: phrase
       }
     })
-    if (phrase === "feed") {
+    if (phrase === 'feed') {
       this.Change_img(1);
     } else if (phrase === 'play') {
       this.Change_img(2);
@@ -472,12 +515,9 @@ export class App extends React.Component {
       this.assistant.close()
     }
   }
-
+  
   render() {
     console.log('render');
-    const f = this.state.foodLevel * 4;
-    const p = this.state.playLevel * 4;
-    const s = this.state.sleepLevel * 4;
     const c1 = this.state.color1;
     const c2 = this.state.color2;
     const c3 = this.state.color3;
@@ -495,7 +535,7 @@ export class App extends React.Component {
             <Col sizeXL={10} offset={1}>
               <div >
             <Tabs
-            size='l'
+            size={this.state.size}
             view= 'secondary'
         >
                 <TabItem
@@ -512,7 +552,7 @@ export class App extends React.Component {
                 </TabItem>
         </Tabs> </div>
         <ToastContainer 
-          position="bottom-center"
+          position="top-center"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
@@ -524,7 +564,7 @@ export class App extends React.Component {
               </Col>
         </Row>
         <Row>
-            <Col type="calc" size={5} > <img id = "img" src={this.state.logo} class="img"  />
+            <Col type="calc" size={4} > <img id = "img" src={this.state.logo} class="img"  />
             </Col>
             <Col>
             <div  style={{textalign:'center'}}>
@@ -533,57 +573,46 @@ export class App extends React.Component {
         class = "button"
         style={{margin: '1em', textalign:'center'}}
         text='Покормить!'
-        size='m'
+        size={this.state.size}
         view='primary'
         pin="square-square"
-        onClick={() => this.assistant_global_event("feed")}
-        />
+        onClick={()=>this.assistant_global_event('feed')}/>
         <Button
         class = "button"
         style={{margin: '1em', textalign:'center'}}
         text='Поиграть!'
-        size='m'
+        size={this.state.size}
         view='primary'
         pin="square-square"
-        onClick={() => this.assistant_global_event('play')}
-        />
+        onClick={()=>this.assistant_global_event('play')}/>
         <Button
         class = "button"
         style={{margin: '1em', textalign:'center'}}
         text='Поспать!'
-        size='m'
+        size={this.state.size}
         view='primary'
         pin="square-square"
-        onClick={() => this.assistant_global_event('sleep')}
-        />
-        <Button
-        class = "button"
-        style={{margin: '1em', textalign:'center'}}
-        text='Выход!'
-        size='m'
-        view='primary'
-        pin="square-square"
-        onClick={() => this.assistant.close()}
-        />
+        onClick={()=>this.assistant_global_event('sleep')}/>
         </div>
             <div >
           <div >
         <h2 class = "box" style={{
         paddingRight: '1.5em',
-      width: '50px'}}
-        > {this.state.foodLevel} </h2>
-
+      width: '50px',
+        textAlign: 'left'}}
+        > {this.state.foodLevel}  </h2>
         <div class = "box" 
         style={{
-        width: f + 'px', // `${v}px`
+        width: this.state.f1 + 'px', // `${v}px`
         height: '35px',
         textalign: 'right',
         backgroundColor: c1,
+        marginLeft: '0.75em'
         }}
         > </div>
         <div class = "box" 
         style={{
-        width: (420 - f ) + 'px', // `${v}px`
+        width: (this.state.full - this.state.f1 ) + 'px', // `${v}px`
         }}
         > </div>
 
@@ -595,17 +624,19 @@ export class App extends React.Component {
         <div >
         <h2 class = "box" style={{
         paddingRight: '1.5em',
-      width: '50px'}}
+      width: '50px',
+      textAlign: 'left'}}
         > {this.state.playLevel} </h2>
         <div class = "box"
          style={{
-        width: p +'px', // `${v}px`
+        width: this.state.p1 +'px', // `${v}px`
         height: '35px',
         backgroundColor: c2,
+        marginLeft: '0.75em'
         }}> </div>
         <div class = "box" 
         style={{
-        width: (420 - p) +'px',
+        width: (this.state.full - this.state.p1) +'px',
         height: '35px',
         }}
         > </div>
@@ -618,18 +649,20 @@ export class App extends React.Component {
         <div >
         <h2 class = "box" style={{
         paddingRight: '1.5em',
-      width: '50px'}}
+        width: '50px',
+        textAlign: 'left'}}
         > {this.state.sleepLevel} </h2>
         <div class = "box" 
         style={{
-        width: s+'px', // `${v}px`
+        width: this.state.s1+'px', // `${v}px`
         height: '35px',
         backgroundColor: c3,
+        marginLeft: '0.75em'
         }}> </div>
 
         <div class = "box" 
         style={{
-        width: (420 - s) +'px',
+        width: (this.state.full - this.state.s1) +'px',
         height: '35px',
         }}
         > </div>
@@ -658,7 +691,6 @@ export class App extends React.Component {
           </div>
         </Row>
         </Container>
-        
       </div>
     )
   }
