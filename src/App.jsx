@@ -484,11 +484,11 @@ export class App extends React.Component {
       this.state.img=500;
     } else 
     if (window.screen.width === 1280){
-      this.state.f1*= 2;
-      this.state.p1*= 2;
-      this.state.s1*= 2;
+      this.state.f1*= 2.5;
+      this.state.p1*= 2.5;
+      this.state.s1*= 2.5;
       this.state.size='s';
-      this.state.full=220;
+      this.state.full=270;
       this.state.img=300;
       this.state.sizeImg=3;
       this.state.sizeDiv=4;
@@ -564,7 +564,7 @@ export class App extends React.Component {
             <Col sizeXL={10} offset={1}>
               <div >
             <Tabs
-            size="s"
+            size={this.state.size}
             view= 'secondary'
         >
                 <TabItem
@@ -602,24 +602,24 @@ export class App extends React.Component {
         <Button
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
-        text='Покормить!'
-        size='s'
+        text='Кормить!'
+        size={this.state.size}
         view='primary'
         pin="square-square"
         onClick={()=>this.assistant_global_event('feed')}/>
         <Button
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
-        text='Поиграть!'
-        size='s'
+        text='Играть!'
+        size={this.state.size}
         view='primary'
         pin="square-square"
         onClick={()=>this.assistant_global_event('play')}/>
         <Button
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
-        text='Поспать!'
-        size='s'
+        text='Спать!'
+        size={this.state.size}
         view='primary'
         pin="square-square"
         onClick={()=>this.assistant_global_event('sleep')}/>
