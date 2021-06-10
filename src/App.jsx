@@ -564,7 +564,7 @@ export class App extends React.Component {
             <Col sizeXL={10} offset={1}>
               <div >
             <Tabs
-            size={this.state.size}
+            size="s"
             view= 'secondary'
         >
                 <TabItem
@@ -603,7 +603,7 @@ export class App extends React.Component {
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
         text='Покормить!'
-        size={this.state.size}
+        size='s'
         view='primary'
         pin="square-square"
         onClick={()=>this.assistant_global_event('feed')}/>
@@ -611,7 +611,7 @@ export class App extends React.Component {
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
         text='Поиграть!'
-        size={this.state.size}
+        size='s'
         view='primary'
         pin="square-square"
         onClick={()=>this.assistant_global_event('play')}/>
@@ -619,13 +619,16 @@ export class App extends React.Component {
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
         text='Поспать!'
-        size={this.state.size}
+        size='s'
         view='primary'
         pin="square-square"
         onClick={()=>this.assistant_global_event('sleep')}/>
         </div>
             <div >
           <div >
+          {/* <div class="two" 
+        style={{height: '35px'}}
+        ></div> */}
         <h2 class = "box" style={{
         paddingRight: '1.5em',
       width: '50px',
@@ -649,7 +652,9 @@ export class App extends React.Component {
         <h2 class = "box" 
         > Сытость </h2>
         </div>
-        <div class="two" style={{height: '35px'}}></div>
+        <div class="two" 
+        style={{height: '35px'}}
+        ></div>
 
         <div >
         <h2 class = "box" style={{

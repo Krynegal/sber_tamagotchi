@@ -25,7 +25,7 @@ body {
   text-align: center;
   position: relative;
   top: 60px;
-  margin: 0.5em;
+  margin: 1em;
 }
 
 .box {
@@ -49,6 +49,7 @@ body {
 .two {
   position: relative;
   top: 10px;
+  height: 35px;
 }
 .frame{
   width: 100%;
@@ -97,6 +98,7 @@ body {
     size: 10%
   }
     .two{
+      height: 60%;
       top: 30%;
     }
 }
@@ -115,6 +117,9 @@ body {
     font-size: 220%;
 
   }
+  .button{
+    margin: 1em;
+  }
     .two{
       top: 30%;
     }
@@ -131,7 +136,7 @@ body {
   .box {
     height: 100%;
     width: 30%;
-    font-size: 100%;
+    font-size: 90%;
 
   }
   .button{
@@ -139,9 +144,10 @@ body {
     font-size: 10%;
     top: 30%;
     size: 10%;
-    margin: 0em;
+    margin: 0.1em;
   }
     .two{
-      top: 30%;
+      height: 40%;
+      top: 10%;
     }
 }
