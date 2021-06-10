@@ -57,6 +57,9 @@ body {
 
 
 @media(max-width:635px) {
+  .center{
+    font-size: 120%;
+  }
   .frame{
     width: 60%;
     height: 60%;
@@ -98,6 +101,7 @@ body {
     }
 }
 @media(min-width:1750px) {
+  
   .frame{
     width: 160%;
     height: 160%;

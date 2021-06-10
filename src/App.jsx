@@ -71,9 +71,9 @@ export class App extends React.Component {
       s: ``,
       m: ``,
       ch: ``,
-      ag: null,
+      flag: true,
       f: false,
-      kusua: null,
+      kusua: false,
   
       f1: null,
       p1: null,
@@ -416,7 +416,7 @@ export class App extends React.Component {
 
 
   changeFlag(value){
-    const notify = () => toast.success("Будет доступна через минуту!", {
+    const notify = () => toast.success("Будет доступна через час!", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -480,15 +480,16 @@ export class App extends React.Component {
       this.state.size='l'
       this.state.full=520;
       this.state.img=500;
-    } else if (window.screen.width === 1280){
-      this.state.f1*= 1.5;
-      this.state.p1*= 1.5;
-      this.state.s1*= 1.5;
-      this.state.size='s';
-      this.state.full=170;
-      this.state.img=200;
-    }
-    if (window.screen.width > 1000)
+    } else 
+    // if (window.screen.width === 1280){
+    //   this.state.f1*= 1.5;
+    //   this.state.p1*= 1.5;
+    //   this.state.s1*= 1.5;
+    //   this.state.size='s';
+    //   this.state.full=170;
+    //   this.state.img=200;
+    // } else 
+    if (window.screen.width > 1300)
     {
       this.state.f1*= 4;
       this.state.p1*= 4;
