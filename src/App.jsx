@@ -490,7 +490,7 @@ export class App extends React.Component {
       this.state.size='s';
       this.state.full=270;
       this.state.img=300;
-      this.state.sizeImg=3;
+      this.state.sizeImg=2;
       this.state.sizeDiv=3;
     } else 
     if (window.screen.width > 1300)
@@ -602,7 +602,7 @@ export class App extends React.Component {
         <Button
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
-        text='Кормить!'
+        text='Кормить'
         size={this.state.size}
         view='primary'
         pin="square-square"
@@ -610,7 +610,7 @@ export class App extends React.Component {
         <Button
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
-        text='Играть!'
+        text='Играть'
         size={this.state.size}
         view='primary'
         pin="square-square"
@@ -618,7 +618,7 @@ export class App extends React.Component {
         <Button
         class = "button"
         style={{margin: '0.2em', textalign:'center'}}
-        text='Спать!'
+        text='Спать'
         size={this.state.size}
         view='primary'
         pin="square-square"
