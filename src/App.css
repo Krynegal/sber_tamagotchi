@@ -34,22 +34,15 @@ body {
   position: relative;
   top: 50px;
   margin-left: 0.1em;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 2cece1dcef35d671738c5e1dc354a21b0c525ee1
   /* left: 500px;
   top: 70px; */
 }
 .right{
   text-align: right;
 }
-<<<<<<< HEAD
-=======
 .left{
   text-align: left;
 }
->>>>>>> 2cece1dcef35d671738c5e1dc354a21b0c525ee1
 .center{
   padding-left: 1em;
 }
@@ -63,11 +56,7 @@ body {
 }
 
 
-<<<<<<< HEAD
-@media(max-width:750px) {
-=======
 @media(max-width:635px) {
->>>>>>> 2cece1dcef35d671738c5e1dc354a21b0c525ee1
   .frame{
     width: 60%;
     height: 60%;
@@ -87,11 +76,7 @@ body {
   .box {
     height: 100%;
     width: 30%;
-<<<<<<< HEAD
     font-size: 140%;
-=======
-    font-size: 110%;
->>>>>>> 2cece1dcef35d671738c5e1dc354a21b0c525ee1
     width: 10%;
     height: 10%;
     top: 30%;
@@ -99,13 +84,8 @@ body {
 
   }
   .button{
-<<<<<<< HEAD
     height: 100%;
     width: 30%;
-=======
-    height: 20%;
-    width: 20%;
->>>>>>> 2cece1dcef35d671738c5e1dc354a21b0c525ee1
     font-size: 50%;
     margin: 1em;
     padding-left: 5%;
@@ -116,8 +96,6 @@ body {
     .two{
       top: 30%;
     }
-<<<<<<< HEAD
-=======
 }
 @media(min-width:1750px) {
   .frame{
@@ -136,5 +114,4 @@ body {
     .two{
       top: 30%;
     }
->>>>>>> 2cece1dcef35d671738c5e1dc354a21b0c525ee1
 }
