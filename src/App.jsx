@@ -482,6 +482,8 @@ export class App extends React.Component {
       this.state.size='l'
       this.state.full=520;
       this.state.img=500;
+      this.state.sizeImg=5;
+      this.state.sizeDiv=7;
     } else 
     if (window.screen.width === 1280){
       this.state.f1*= 2.5;
@@ -504,7 +506,7 @@ export class App extends React.Component {
       this.state.sizeImg=5;
       this.state.sizeDiv=6;
     } 
-    else  if (window.screen.width > 900)
+    else  if ((window.screen.width > 900) && (window.screen.height < 1900))
     {
       this.state.f1*= 4;
       this.state.p1*= 4;
@@ -514,6 +516,16 @@ export class App extends React.Component {
       this.state.img=400;
       this.state.sizeImg=5;
       this.state.sizeDiv=7;
+    } else  if ((window.screen.width > 900) && (window.screen.height > 1900))
+    {
+      this.state.f1*= 5;
+      this.state.p1*= 5;
+      this.state.s1*=5 ;
+      this.state.size='l'
+      this.state.full=520;
+      this.state.img=600;
+      this.state.sizeImg=6;
+      this.state.sizeDiv=9;
     } 
     else {
       this.state.offset=2;
