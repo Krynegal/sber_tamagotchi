@@ -60,6 +60,7 @@ body {
 @media(max-width:900px) {
   .center{
     font-size: 120%;
+    padding-left: 0em;
   }
   .frame{
     width: 60%;
@@ -130,8 +131,8 @@ body {
     font-size: 120%;
   }
   .img{
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
   }
   .box {
     height: 100%;

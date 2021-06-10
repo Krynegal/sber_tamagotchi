@@ -597,7 +597,7 @@ export class App extends React.Component {
             <Col type="calc" size={this.state.sizeImg} > <img id = "img" src={this.state.logo} class="img"  />
             </Col>
             <Col size={this.state.sizeDiv}>
-            <div  style={{textalign:'center'}}>
+            <div  style={{textalign:'center', margin: '0.5em'}}>
         
         <Button
         class = "button"
