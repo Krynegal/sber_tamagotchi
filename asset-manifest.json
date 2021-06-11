@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/sber_tamagotchi/static/css/main.337c15b9.chunk.css",
-    "main.js": "/sber_tamagotchi/static/js/main.460ee5b9.chunk.js",
-    "main.js.map": "/sber_tamagotchi/static/js/main.460ee5b9.chunk.js.map",
+    "main.css": "/sber_tamagotchi/static/css/main.1effb752.chunk.css",
+    "main.js": "/sber_tamagotchi/static/js/main.c7900bb2.chunk.js",
+    "main.js.map": "/sber_tamagotchi/static/js/main.c7900bb2.chunk.js.map",
     "runtime-main.js": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js",
     "runtime-main.js.map": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js.map",
     "static/css/2.455526e2.chunk.css": "/sber_tamagotchi/static/css/2.455526e2.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.b5be2dcb.chunk.js.map": "/sber_tamagotchi/static/js/3.b5be2dcb.chunk.js.map",
     "index.html": "/sber_tamagotchi/index.html",
     "static/css/2.455526e2.chunk.css.map": "/sber_tamagotchi/static/css/2.455526e2.chunk.css.map",
-    "static/css/main.337c15b9.chunk.css.map": "/sber_tamagotchi/static/css/main.337c15b9.chunk.css.map",
+    "static/css/main.1effb752.chunk.css.map": "/sber_tamagotchi/static/css/main.1effb752.chunk.css.map",
     "static/js/2.a66cd3af.chunk.js.LICENSE.txt": "/sber_tamagotchi/static/js/2.a66cd3af.chunk.js.LICENSE.txt",
     "static/media/1.10ff95b7.gif": "/sber_tamagotchi/static/media/1.10ff95b7.gif",
     "static/media/12.2fae7a1b.gif": "/sber_tamagotchi/static/media/12.2fae7a1b.gif",
@@ -36,7 +36,7 @@
     "static/js/runtime-main.5c5fe94f.js",
     "static/css/2.455526e2.chunk.css",
     "static/js/2.a66cd3af.chunk.js",
-    "static/css/main.337c15b9.chunk.css",
-    "static/js/main.460ee5b9.chunk.js"
+    "static/css/main.1effb752.chunk.css",
+    "static/js/main.c7900bb2.chunk.js"
   ]
 }
