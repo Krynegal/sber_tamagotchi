@@ -4,7 +4,7 @@ import logo1 from '../src/1.gif';
 import logo2 from '../src/22.gif';
 import logo3 from '../src/12.gif';
 import logo4 from '../src/44.gif';
-import logo5 from '../src/38.gif';
+import logo5 from '../src/38.png';
 import logo6 from '../src/39.gif';
 import logo7 from '../src/17.gif';
 import logo8 from '../src/18.gif';
