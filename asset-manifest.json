@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sber_tamagotchi/static/css/main.1effb752.chunk.css",
-    "main.js": "/sber_tamagotchi/static/js/main.c7900bb2.chunk.js",
-    "main.js.map": "/sber_tamagotchi/static/js/main.c7900bb2.chunk.js.map",
+    "main.js": "/sber_tamagotchi/static/js/main.75c828d0.chunk.js",
+    "main.js.map": "/sber_tamagotchi/static/js/main.75c828d0.chunk.js.map",
     "runtime-main.js": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js",
     "runtime-main.js.map": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js.map",
     "static/css/2.455526e2.chunk.css": "/sber_tamagotchi/static/css/2.455526e2.chunk.css",
@@ -22,7 +22,7 @@
     "static/media/2-1.b1f44c28.gif": "/sber_tamagotchi/static/media/2-1.b1f44c28.gif",
     "static/media/22.523edca7.gif": "/sber_tamagotchi/static/media/22.523edca7.gif",
     "static/media/25.95776efe.gif": "/sber_tamagotchi/static/media/25.95776efe.gif",
-    "static/media/38.62b71af9.gif": "/sber_tamagotchi/static/media/38.62b71af9.gif",
+    "static/media/38.46c06d30.png": "/sber_tamagotchi/static/media/38.46c06d30.png",
     "static/media/39.134cd4ef.gif": "/sber_tamagotchi/static/media/39.134cd4ef.gif",
     "static/media/42.36414db4.gif": "/sber_tamagotchi/static/media/42.36414db4.gif",
     "static/media/43.5b33f99f.gif": "/sber_tamagotchi/static/media/43.5b33f99f.gif",
@@ -37,6 +37,6 @@
     "static/css/2.455526e2.chunk.css",
     "static/js/2.a66cd3af.chunk.js",
     "static/css/main.1effb752.chunk.css",
-    "static/js/main.c7900bb2.chunk.js"
+    "static/js/main.75c828d0.chunk.js"
   ]
 }
