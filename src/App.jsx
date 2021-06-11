@@ -485,7 +485,7 @@ export class App extends React.Component {
       this.state.sizeImg=5;
       this.state.sizeDiv=7;
     } else 
-    if (window.screen.width === 1280){
+    if ((window.screen.width === 1280)&&(window.screen.height === 800)){
       this.state.f1*= 2.5;
       this.state.p1*= 2.5;
       this.state.s1*= 2.5;
