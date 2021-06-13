@@ -2,7 +2,7 @@ import React from "react";
 import logo0 from '../src/unnamed.gif';
 import logo1 from '../src/1.gif';
 import logo2 from '../src/22.gif';
-import logo3 from '../src/12.gif';
+import logo3 from '../src/12-1.gif';
 import logo4 from '../src/44.gif';
 import logo5 from '../src/38.png';
 import logo6 from '../src/39.gif';
