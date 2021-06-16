@@ -432,13 +432,13 @@ export class App extends React.Component {
       case 1:            
         this.setState({ flag:  true});
         this.state.kusua = false;
-        this.Change_img();
+        this.didTamagatchiDie();
         break;
       case 2:
         if (this.state.f === true){
         this.setState({ flag:  false});
         this.state.kusua = true;
-        this.Change_img();
+        this.didTamagatchiDie();
         } else notify();
         break;
       
