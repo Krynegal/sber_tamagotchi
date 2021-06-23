@@ -482,8 +482,8 @@ export class App extends React.Component {
       this.state.size='l'
       this.state.full=520;
       this.state.img=500;
-      this.state.sizeImg=5;
-      this.state.sizeDiv=7;
+      this.state.sizeImg=4;
+      this.state.sizeDiv=6;
     } else 
     if ((window.screen.width === 1280)&&(window.screen.height === 800)){
       this.state.f1*= 2.5;
@@ -618,7 +618,8 @@ export class App extends React.Component {
         size={this.state.size}
         view='primary'
         pin="square-square"
-        onClick={()=>this.assistant_global_event('feed')}/>
+        onClick={()=>this.assistant_global_event('feed')}
+        />
         <Button
         class = "button"
         style={{margin: '0.5em', textalign:'center'}}
@@ -626,7 +627,8 @@ export class App extends React.Component {
         size={this.state.size}
         view='primary'
         pin="square-square"
-        onClick={()=>this.assistant_global_event('play')}/>
+        onClick={()=>this.assistant_global_event('play')}
+        />
         <Button
         class = "button"
         style={{margin: '0.5em', textalign:'center'}}
@@ -634,7 +636,8 @@ export class App extends React.Component {
         size={this.state.size}
         view='primary'
         pin="square-square"
-        onClick={()=>this.assistant_global_event('sleep')}/>
+        onClick={()=>this.assistant_global_event('sleep')}
+        />
         </div>
             <div >
           <div >
