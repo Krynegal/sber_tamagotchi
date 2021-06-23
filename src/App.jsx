@@ -234,6 +234,7 @@ export class App extends React.Component {
     setTimeout(() => setInterval(() => {
       this.timer();
       this.words();
+      this.checkWidth();
   }, 1000), 1000)
     
   }
