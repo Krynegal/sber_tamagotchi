@@ -57,9 +57,9 @@ export class App extends React.Component {
       UserId: "",
       //
       logo: logo0,
-      foodLevel: null,
-      sleepLevel: null,
-      playLevel: null,
+      foodLevel: 50,
+      sleepLevel: 50,
+      playLevel: 50,
       color1: 'var(--plasma-colors-accent)',
       color2: 'var(--plasma-colors-accent)',
       color3: 'var(--plasma-colors-accent)',
@@ -208,22 +208,26 @@ export class App extends React.Component {
       this.state.flag,
       );
     }, 6000)
-
+    setTimeout(()=>{
+      this.checkWidth();
+      this.didTamagatchiDie(); 
+      this.changeColor();
+    }, 1000);
     setInterval(() => {
       this.less(1); 
       this.didTamagatchiDie(); 
-      this.checkWidth();
+      //this.checkWidth();
       this.changeColor();
     }, 12000);
     setInterval(() => {
       this.less(2); 
-      this.checkWidth();
+      //this.checkWidth();
       this.didTamagatchiDie(); 
       this.changeColor();
     }, 60000);
     setInterval(() => {
       this.less(3); 
-      this.checkWidth();
+      //this.checkWidth();
       this.didTamagatchiDie(); 
       this.changeColor();
     }, 20000);
