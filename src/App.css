@@ -127,7 +127,7 @@ body {
     }
 }
 
-@media(min-height:1000px) {
+@media(min-height:1000px)and( min-width: 1000px) {
   .center{
     font-size: 220%;
     padding-left: 1em;
@@ -155,7 +155,7 @@ body {
 
 @media(width: 1280px)and( height: 800px) {
   .center{
-    font-size: 120%;
+    font-size: 100%;
   }
   .img{
     height: 350px;

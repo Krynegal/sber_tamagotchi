@@ -216,25 +216,24 @@ export class App extends React.Component {
     setInterval(() => {
       this.less(1); 
       this.didTamagatchiDie(); 
-      //this.checkWidth();
+      this.checkWidth();
       this.changeColor();
     }, 12000);
     setInterval(() => {
       this.less(2); 
-      //this.checkWidth();
+      this.checkWidth();
       this.didTamagatchiDie(); 
       this.changeColor();
     }, 60000);
     setInterval(() => {
       this.less(3); 
-      //this.checkWidth();
+      this.checkWidth();
       this.didTamagatchiDie(); 
       this.changeColor();
     }, 20000);
     setTimeout(() => setInterval(() => {
       this.timer();
       this.words();
-      this.checkWidth();
   }, 1000), 1000)
     
   }
@@ -466,7 +465,7 @@ export class App extends React.Component {
       if (this.state.hour === 0) this.state.ch = ``;
       else if (this.state.hour === 1){
       this.setState({ ch:  `${this.state.hour} час`});
-    } else if ((this.state.hour > 1)&&(this.state.hour < 5)) {
+    } else if ((this.state.hour%10 > 1)&&(this.state.hour%10 < 5)) {
       this.setState({ ch:  `${this.state.hour} часа`});
     } else {this.setState({ ch:  `${this.state.hour} часов`});}
 
@@ -480,16 +479,16 @@ export class App extends React.Component {
     this.state.f1 = this.state.foodLevel ;
     this.state.p1 = this.state.playLevel;
     this.state.s1 = this.state.sleepLevel ;
-    if (window.screen.width > 1750){
-      this.state.f1*= 5;
-      this.state.p1*= 5;
-      this.state.s1*= 5 ;
-      this.state.size='l'
-      this.state.full=520;
-      this.state.img=500;
-      this.state.sizeImg=4;
-      this.state.sizeDiv=6;
-    } else 
+    // if (window.screen.width > 1750){
+    //   this.state.f1*= 5;
+    //   this.state.p1*= 5;
+    //   this.state.s1*= 5 ;
+    //   this.state.size='l'
+    //   this.state.full=520;
+    //   this.state.img=500;
+    //   this.state.sizeImg=4;
+    //   this.state.sizeDiv=6;
+    // } else 
     if ((window.screen.width === 1280)&&(window.screen.height === 800)){
       this.state.f1*= 2.5;
       this.state.p1*= 2.5;
@@ -508,8 +507,8 @@ export class App extends React.Component {
       this.state.size='l'
       this.state.full=420;
       this.state.img=400;
-      this.state.sizeImg=5;
-      this.state.sizeDiv=6;
+      this.state.sizeImg=4;
+      this.state.sizeDiv=8;
     } 
     else  if ((window.screen.width > 900) && (window.screen.height < 1900))
     {
