@@ -479,16 +479,6 @@ export class App extends React.Component {
     this.state.f1 = this.state.foodLevel ;
     this.state.p1 = this.state.playLevel;
     this.state.s1 = this.state.sleepLevel ;
-    // if (window.screen.width > 1750){
-    //   this.state.f1*= 5;
-    //   this.state.p1*= 5;
-    //   this.state.s1*= 5 ;
-    //   this.state.size='l'
-    //   this.state.full=520;
-    //   this.state.img=500;
-    //   this.state.sizeImg=4;
-    //   this.state.sizeDiv=6;
-    // } else 
     if ((window.screen.width === 1280)&&(window.screen.height === 800)){
       this.state.f1*= 2.5;
       this.state.p1*= 2.5;
@@ -506,7 +496,6 @@ export class App extends React.Component {
       this.state.s1*=4 ;
       this.state.size='l'
       this.state.full=420;
-      this.state.img=400;
       this.state.sizeImg=4;
       this.state.sizeDiv=8;
     } 
