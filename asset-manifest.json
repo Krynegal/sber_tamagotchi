@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/sber_tamagotchi/static/css/main.b7e61657.chunk.css",
-    "main.js": "/sber_tamagotchi/static/js/main.4147ce84.chunk.js",
-    "main.js.map": "/sber_tamagotchi/static/js/main.4147ce84.chunk.js.map",
+    "main.css": "/sber_tamagotchi/static/css/main.585e47f0.chunk.css",
+    "main.js": "/sber_tamagotchi/static/js/main.92cc6531.chunk.js",
+    "main.js.map": "/sber_tamagotchi/static/js/main.92cc6531.chunk.js.map",
     "runtime-main.js": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js",
     "runtime-main.js.map": "/sber_tamagotchi/static/js/runtime-main.5c5fe94f.js.map",
     "static/css/2.455526e2.chunk.css": "/sber_tamagotchi/static/css/2.455526e2.chunk.css",
@@ -12,23 +12,23 @@
     "static/js/3.b5be2dcb.chunk.js.map": "/sber_tamagotchi/static/js/3.b5be2dcb.chunk.js.map",
     "index.html": "/sber_tamagotchi/index.html",
     "static/css/2.455526e2.chunk.css.map": "/sber_tamagotchi/static/css/2.455526e2.chunk.css.map",
-    "static/css/main.b7e61657.chunk.css.map": "/sber_tamagotchi/static/css/main.b7e61657.chunk.css.map",
+    "static/css/main.585e47f0.chunk.css.map": "/sber_tamagotchi/static/css/main.585e47f0.chunk.css.map",
     "static/js/2.772095c8.chunk.js.LICENSE.txt": "/sber_tamagotchi/static/js/2.772095c8.chunk.js.LICENSE.txt",
     "static/media/1.1604e800.gif": "/sber_tamagotchi/static/media/1.1604e800.gif",
     "static/media/12-1.d42c22d6.gif": "/sber_tamagotchi/static/media/12-1.d42c22d6.gif",
     "static/media/13.1f4b21fb.gif": "/sber_tamagotchi/static/media/13.1f4b21fb.gif",
     "static/media/17.a32c7afe.gif": "/sber_tamagotchi/static/media/17.a32c7afe.gif",
     "static/media/18.1f9f31c6.gif": "/sber_tamagotchi/static/media/18.1f9f31c6.gif",
-    "static/media/2-1.b1f44c28.gif": "/sber_tamagotchi/static/media/2-1.b1f44c28.gif",
+    "static/media/2-1.6834f8aa.gif": "/sber_tamagotchi/static/media/2-1.6834f8aa.gif",
     "static/media/22.4c5ae042.gif": "/sber_tamagotchi/static/media/22.4c5ae042.gif",
     "static/media/25.32555161.gif": "/sber_tamagotchi/static/media/25.32555161.gif",
     "static/media/38.46c06d30.png": "/sber_tamagotchi/static/media/38.46c06d30.png",
-    "static/media/39.134cd4ef.gif": "/sber_tamagotchi/static/media/39.134cd4ef.gif",
-    "static/media/42.36414db4.gif": "/sber_tamagotchi/static/media/42.36414db4.gif",
-    "static/media/43.5b33f99f.gif": "/sber_tamagotchi/static/media/43.5b33f99f.gif",
+    "static/media/39.d43378a6.gif": "/sber_tamagotchi/static/media/39.d43378a6.gif",
+    "static/media/42.f57d2d1e.gif": "/sber_tamagotchi/static/media/42.f57d2d1e.gif",
+    "static/media/43.4b993593.gif": "/sber_tamagotchi/static/media/43.4b993593.gif",
     "static/media/44.6fe800ca.gif": "/sber_tamagotchi/static/media/44.6fe800ca.gif",
     "static/media/5-1.348fb561.gif": "/sber_tamagotchi/static/media/5-1.348fb561.gif",
-    "static/media/6.05d4448a.gif": "/sber_tamagotchi/static/media/6.05d4448a.gif",
+    "static/media/6.43a3f868.gif": "/sber_tamagotchi/static/media/6.43a3f868.gif",
     "static/media/8-1.1baa1012.gif": "/sber_tamagotchi/static/media/8-1.1baa1012.gif",
     "static/media/unnamed.16989a75.gif": "/sber_tamagotchi/static/media/unnamed.16989a75.gif"
   },
@@ -36,7 +36,7 @@
     "static/js/runtime-main.5c5fe94f.js",
     "static/css/2.455526e2.chunk.css",
     "static/js/2.772095c8.chunk.js",
-    "static/css/main.b7e61657.chunk.css",
-    "static/js/main.4147ce84.chunk.js"
+    "static/css/main.585e47f0.chunk.css",
+    "static/js/main.92cc6531.chunk.js"
   ]
 }
