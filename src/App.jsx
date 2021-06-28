@@ -57,9 +57,9 @@ export class App extends React.Component {
       UserId: "",
       //
       logo: logo0,
-      foodLevel: 50,
-      sleepLevel: 50,
-      playLevel: 50,
+      foodLevel: null,
+      sleepLevel: null,
+      playLevel: null,
       color1: 'var(--plasma-colors-accent)',
       color2: 'var(--plasma-colors-accent)',
       color3: 'var(--plasma-colors-accent)',
