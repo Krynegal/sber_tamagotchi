@@ -35,14 +35,16 @@ body {
   top: 50px;
   margin-left: 0.1em;
   font-size: 100%;
-  /* left: 500px;
-  top: 70px; */
+  left: 5%;
+  /*top: 70px; */
 }
 .right{
   text-align: right;
 }
 .left{
-  text-align: left;
+  /*text-align: left;*/
+  position: relative;
+  left: 10%;
 }
 .center{
   padding-left: 1em;
@@ -58,7 +60,7 @@ body {
 }
 
 
-@media(max-width:900px) {
+@media(max-width:700px) {
   .center{
     font-size: 130%;
     padding-left: 0.5em;
@@ -88,6 +90,7 @@ body {
     top: 30%;
     margin-left: 0.1em;
     padding-left: 0.5em;
+    left: 0%;
   }
   .button{
     height: 100%;
@@ -103,6 +106,9 @@ body {
       height: 60%;
       top: 30%;
     }
+  .left{
+    left: 0%;
+  }
 }
 @media(min-width:1750px) {
   

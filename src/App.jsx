@@ -489,7 +489,7 @@ export class App extends React.Component {
       this.state.sizeImg=2;
       this.state.sizeDiv=3;
     } else 
-    if (window.screen.width > 1300)
+    if (window.screen.width > 760)
     {
       this.state.f1*= 4;
       this.state.p1*= 4;
@@ -499,17 +499,18 @@ export class App extends React.Component {
       this.state.sizeImg=4;
       this.state.sizeDiv=8;
     } 
-    else  if ((window.screen.width > 900) && (window.screen.height < 1900))
-    {
-      this.state.f1*= 4;
-      this.state.p1*= 4;
-      this.state.s1*=4 ;
-      this.state.size='m'
-      this.state.full=420;
-      this.state.img=400;
-      this.state.sizeImg=5;
-      this.state.sizeDiv=7;
-    } else  if ((window.screen.width > 900) && (window.screen.height > 1900))
+    // else  if ((window.screen.width > 900) && (window.screen.height < 1900))
+    // {
+    //   this.state.f1*= 4;
+    //   this.state.p1*= 4;
+    //   this.state.s1*=4 ;
+    //   this.state.size='m'
+    //   this.state.full=420;
+    //   this.state.img=400;
+    //   this.state.sizeImg=5;
+    //   this.state.sizeDiv=7;
+    // } 
+    else  if ((window.screen.width > 900) && (window.screen.height > 1900))
     {
       this.state.f1*= 5;
       this.state.p1*= 5;
@@ -602,7 +603,7 @@ export class App extends React.Component {
             <Col type="calc" size={this.state.sizeImg} > <img id = "img" src={this.state.logo} class="img"  />
             </Col>
             <Col size={this.state.sizeDiv}>
-            <div  style={{textalign:'center', margin: '0.5em'}}>
+            <div  class = "left" style={{textalign:'center', margin: '0.5em'}}>
         
         <Button
         class = "button"
