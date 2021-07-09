@@ -224,7 +224,7 @@ export class App extends React.Component {
       this.checkWidth();
       this.didTamagatchiDie(); 
       this.changeColor();
-    }, 60000);
+    }, 360000);
     setInterval(() => {
       this.less(3); 
       this.checkWidth();
