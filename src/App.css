@@ -70,8 +70,11 @@ body {
     height: 60%;
   }
   .img{
+    position: relative;
+    left: 20%;
     height: 250px;
     width: 250px;
+
   }
   .App {
     overflow: auto;
